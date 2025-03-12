@@ -1,0 +1,59 @@
+.haut
+    {
+        background-image: url('./plat/plat10.png');
+        background-size: cover;
+    }
+    .resto
+    {
+        color: white;
+    }
+        
+    .contenaire
+    {
+        
+        border: 1px solid;
+        position: sticky;
+        top: 0;
+    }
+    ul
+    {
+        position: sticky;
+        top: 0;
+    }
+    a:hover
+    {
+        color:beige ;
+    }
+    .liens
+    {
+        color:white;
+        text-shadow: 1px 1px 1px black;
+    }
+    .hero
+    {
+        display: flex;
+        justify-content: center;
+    
+        width: opx;
+        height: 300px;
+       
+        color: aliceblue;
+    }
+    .contenaire_heros
+    {
+        
+        justify-content: center;
+        align-content: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+    }
+    span
+    {
+        font-size: 2em;
+        font-family: 'Gill Sans' 'Trebuchet MS', sans-serif;
+    }
+
+    img
+    {
+        width: 200px;
+    }
