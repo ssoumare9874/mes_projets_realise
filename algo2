@@ -1,0 +1,49 @@
+# Problème 1 : Somme des éléments distincts de deux tableaux
+Algorithme SommeElementsDistincts
+Variables :
+    serie1, serie2 : Tableaux d'entiers  # Les deux séries de nombres entiers
+    union_set : Ensemble d'entiers  # Ensemble pour stocker les éléments distincts
+    somme : Entier  # Variable pour stocker la somme des éléments distincts
+
+Début
+    somme <- 0  # Initialisation de la somme à 0
+    union_set <- éléments distincts entre serie1 et serie2  # Trouver les éléments uniques
+    Pour chaque élément e dans union_set Faire
+        somme <- somme + e  # Ajouter l'élément à la somme
+    Fin Pour
+    Afficher "Somme des éléments distincts:", somme  # Affichage du résultat
+Fin
+
+# Problème 2 : Produit scalaire et orthogonalité
+Algorithme DotProduct
+Paramètres :
+    v1, v2 : Tableaux d'entiers  # Les deux vecteurs à multiplier
+Variable :
+    ps : Entier  # Variable pour stocker le produit scalaire
+
+Début
+    Si longueur(v1) <> longueur(v2) Alors  # Vérification de la taille des vecteurs
+        Afficher "Erreur : les vecteurs doivent avoir la même taille"
+        Retourner  # Arrêter l'exécution en cas d'erreur
+    Fin Si
+    ps <- 0  # Initialisation du produit scalaire à 0
+    Pour i allant de 0 à longueur(v1)-1 Faire
+        ps <- ps + (v1[i] * v2[i])  # Calcul du produit scalaire
+    Fin Pour
+    Retourner ps  # Retourner le résultat du produit scalaire
+Fin
+
+Algorithme SontOrthogonaux
+Paramètres :
+    v1, v2 : Tableaux d'entiers  # Les deux vecteurs à vérifier
+Variable :
+    ps : Entier  # Stocke le résultat du produit scalaire
+
+Début
+    ps <- DotProduct(v1, v2)  # Calcul du produit scalaire des deux vecteurs
+    Si ps = 0 Alors  # Vérification de l'orthogonalité
+        Afficher "Les vecteurs sont orthogonaux"  # Affichage si les vecteurs sont orthogonaux
+    Sinon
+        Afficher "Les vecteurs ne sont pas orthogonaux"  # Affichage si les vecteurs ne sont pas orthogonaux
+    Fin Si
+Fin
