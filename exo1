@@ -1,0 +1,37 @@
+Début  
+    // Initialisation des compteurs
+    longueur ← 0  
+    nombreMots ← 0  
+    nombreVoyelles ← 0  
+    estDansUnMot ← Faux  
+
+    // Lire caractère par caractère
+    Répéter  
+        Lire caractère  
+
+        // Vérifier si c'est la fin de la phrase
+        Si caractère ≠ '.' Alors  
+            longueur ← longueur + 1  
+
+            // Vérifier si le caractère est une voyelle
+            Si caractère ∈ {'a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'} Alors  
+                nombreVoyelles ← nombreVoyelles + 1  
+            FinSi  
+
+            // Vérifier si on est dans un mot
+            Si caractère ≠ ' ' Alors  
+                Si estDansUnMot = Faux Alors  
+                    nombreMots ← nombreMots + 1  
+                    estDansUnMot ← Vrai  
+                FinSi  
+            Sinon  
+                estDansUnMot ← Faux  
+            FinSi  
+        FinSi  
+    Jusqu’à ce que caractère = '.'  
+
+    // Affichage des résultats
+    Afficher "Longueur de la phrase :", longueur  
+    Afficher "Nombre de mots :", nombreMots  
+    Afficher "Nombre de voyelles :", nombreVoyelles  
+Fin  
