@@ -1,0 +1,76 @@
+Rapport de Projet : Jeu de Quiz avec Tkinter et JSON
+
+1. Introduction
+
+Le présent rapport décrit le développement d'un jeu de quiz interactif en Python, utilisant Tkinter pour l'interface graphique et JSON pour le stockage des questions et réponses. L'objectif est de fournir une application facile à utiliser, permettant aux utilisateurs de répondre à une série de questions et d'obtenir un score final.
+
+2. Objectifs du Projet
+
+Développer une interface intuitive pour le quiz.
+
+Charger dynamiquement les questions depuis un fichier JSON.
+
+Permettre à l'utilisateur de sélectionner une réponse et passer à la question suivante.
+
+Afficher le score final à la fin du quiz.
+
+3. Technologies Utilisées
+
+Python 3 : Langage principal du projet.
+
+Tkinter : Module pour la création de l'interface graphique.
+
+JSON : Format utilisé pour stocker les questions et réponses.
+
+4. Conception et Fonctionnement
+
+4.1 Structure des données
+
+Les questions et réponses sont stockées dans un fichier JSON nommé questions.json. Chaque question est représentée sous la forme suivante :
+
+4.2 Interface utilisateur
+
+L'interface est constituée de :
+
+Une étiquette affichant la question en cours.
+
+Quatre boutons représentant les différentes options de réponse.
+
+Une boîte de dialogue messagebox affichant le score final.
+
+4.3 Fonctionnement du programme
+
+Chargement des questions depuis le fichier questions.json.
+
+Affichage progressif des questions.
+
+Vérification de la réponse sélectionnée.
+
+Passage à la question suivante jusqu'à la fin du quiz.
+
+Affichage du score final et fermeture de l'application.
+
+5. Code Source
+
+5.1 Chargement des questions depuis JSON
+
+5.2 Interface utilisateur avec Tkinter
+
+5.3 Gestion du Quiz
+
+6. Résultats et Analyse
+
+6.1 Fonctionnalités Réalisées
+
+✅ Interface utilisateur simple et efficace avec Tkinter.✅ Chargement des questions depuis un fichier JSON.✅ Gestion de la navigation entre les questions.✅ Affichage du score final dans une boîte de dialogue.
+
+6.2 Améliorations Possibles
+
+🔹 Ajouter un chronomètre pour chaque question.🔹 Permettre l'ajout de nouvelles questions via l'interface.🔹 Sauvegarder les scores des joueurs dans un fichier externe.
+
+7. Conclusion
+
+Ce projet démontre comment Tkinter peut être utilisé pour créer une application interactive en Python, combiné avec JSON pour gérer les données. Il constitue une base solide pour un jeu de quiz plus avancé.
+
+🚀 Prochaine étape : Ajouter un mode multijoueur et un système de scores sauvegardés !
+
