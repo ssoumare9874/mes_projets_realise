@@ -1,0 +1,57 @@
+import tkinter as tk
+from tkinter import messagebox
+import json
+
+class QuizApp:
+    def __init__(self, root, quiz_data):
+        self.root = root
+        self.root.title("Quiz en Python")
+        
+        self.quiz_data = quiz_data
+        self.current_question = 0
+        self.score = 0
+        self.total_questions = len(quiz_data)
+        
+        self.question_label = tk.Label(root, text="", wraplength=400, font=("Arial", 14))
+        self.question_label.pack(pady=20)
+        
+        self.var_choice = tk.StringVar()
+        self.options = []
+        for i in range(4):
+            btn = tk.Radiobutton(root, text="", variable=self.var_choice, value=str(i), font=("Arial", 12))
+            btn.pack(anchor="w")
+            self.options.append(btn)
+        
+        self.submit_button = tk.Button(root, text="Valider", command=self.check_answer)
+        self.submit_button.pack(pady=20)
+        
+        self.load_question()
+        
+    def load_question(self):
+        if self.current_question < self.total_questions:
+            q_data = self.quiz_data[self.current_question]
+            self.question_label.config(text=q_data["question"])
+            for i, option in enumerate(q_data["options"]):
+                self.options[i].config(text=option)
+        else:
+            messagebox.showinfo("Fin du Quiz", f"Quiz terminé ! Votre score : {self.score}/{self.total_questions}")
+            self.root.quit()
+    
+    def check_answer(self):
+        selected_option = self.var_choice.get()
+        if selected_option:
+            correct_answer = str(self.quiz_data[self.current_question]["answer"])
+            if selected_option == correct_answer:
+                self.score += 1
+            self.current_question += 1
+            self.load_question()
+        else:
+            messagebox.showwarning("Alerte", "Veuillez sélectionner une réponse")
+
+if __name__ == "__main__":
+    with open("quiz_data.json", "r", encoding="utf-8") as file:
+        quiz_data = json.load(file)
+    
+    root = tk.Tk()
+    app = QuizApp(root, quiz_data)
+    root.mainloop()
